@@ -11,17 +11,18 @@
       </button>
     </form>
 
-    <div class="w-full flex flex-col items-center justify-center mt-7">
-      <div v-if="urlInfo" class="md:w-3/6 w-5/6 text-lg bg-slate-200 rounded-lg p-4">
-        <p class="font-semibold text-gray-800">Your link:
+    <div class="w-full flex flex-col items-center justify-center mt-7 px-4">
+      <div v-if="urlInfo"
+        class="md:w-4/6 w-full  bg-slate-200 rounded-lg px-3 py-2 flex flex-col items-evenly justify-center">
+        <p class="text-lg font-semibold text-gray-800">Your link:
         </p>
         <span class="text-blue-600 w-full">
           {{ urlInfo.redirectUrl }}
         </span>
-        <p class="font-semibold text-gray-800">
+        <p class="text-lg font-semibold text-gray-800">
           Your new link:
         </p>
-        <a :href="shortUrl" target="_blank" class="text-orange-400 underline">{{ shortUrl }}</a>
+        <a :href="shortUrl" target="_blank" class="text-orange-600 underline">{{ shortUrl }}</a>
 
 
         <button @click="copyUrl()"
