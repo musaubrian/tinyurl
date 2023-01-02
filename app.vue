@@ -14,16 +14,17 @@
     <div class="w-full flex flex-col items-center justify-center mt-7">
       <div v-if="urlInfo" class="md:w-3/6 w-5/6 text-lg bg-slate-200 rounded-lg p-4">
         <p class="font-semibold text-gray-800">Your link:
-          <span class="text-blue-600">
-            {{ urlInfo.redirectUrl }}
-          </span>
         </p>
+        <span class="text-blue-600 w-full">
+          {{ urlInfo.redirectUrl }}
+        </span>
         <p class="font-semibold text-gray-800">
           Your new link:
-          <a :href="shortUrl" target="_blank" class="text-orange-400 underline">{{ shortUrl }}</a>
         </p>
+        <a :href="shortUrl" target="_blank" class="text-orange-400 underline">{{ shortUrl }}</a>
 
-        <button @click=""
+
+        <button @click="copyUrl()"
           class="bg-slate-500 mt-4 text-white font-semibold p-3 rounded-lg active:bg-slate-600 active:transition-all">
           Copy link
         </button>
@@ -44,8 +45,9 @@ export default {
     }
   },
   methods: {
-    copyUrl(url) {
-      navigator.clipboard.writeText(url).then(alert('success')).catch(alert('failure'))
+    copyUrl() {
+      navigator.clipboard.writeText(this.shortUrl)
+        .then(alert('Copied successfully')).catch('could not copy')
     },
     async setNewUrl() {
       const postData = {
@@ -61,7 +63,6 @@ export default {
       this.fetching = false
       this.urlInfo = data
       this.shortUrl = `${url}/r/${this.urlInfo.url}`
-      this.copyUrl(this.shortUrl)
       console.log(this.urlInfo)
     }
   }
