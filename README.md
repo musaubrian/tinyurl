@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/deb40d62-49af-4828-a6ce-4b02fbc70900/deploy-status)](https://app.netlify.com/sites/tinieurl/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/deb40d62-49af-4828-a6ce-4b02fbc70900/deploy-status)](https://app.netlify.com/sites/trl/deploys)
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
