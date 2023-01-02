@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex-col w-full h-[80vh] items-center justify-center">
-    <h1 class="text-gray-800 text-3xl font-semibold capitalize mb-5 underline">TinieUrl</h1>
+    <h1 class="text-gray-800 text-3xl font-semibold capitalize ">TinieUrl</h1>
+    <h2 class="mb-5 text-gray-700 text-2xl">One more url shortener you didn't need</h2>
     <form @submit.prevent="setNewUrl()" class="md:w-3/6 w-5/6 flex flex-col items-center justify-center">
       <input v-model="longUrl" class="border-2 border-gray-800 rounded-lg  py-2 px-3 text-lg w-full" type="url"
         placeholder="https://yourprettylonglinkhere.com" required>
