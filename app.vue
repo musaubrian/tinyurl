@@ -28,7 +28,7 @@
 
         <button @click="copyUrl()"
           class="bg-slate-500 mt-4 text-white font-semibold p-3 rounded-lg active:bg-slate-600 active:transition-all">
-          <span v-if="copied">Copied!</span>
+          <span v-if="copied">Copied successfully!</span>
           <span v-else>Copy link</span>
         </button>
 
@@ -51,7 +51,7 @@ export default {
   methods: {
     copyUrl() {
       navigator.clipboard.writeText(this.shortUrl)
-        .then(()=> (this.copied = true)).catch('could not copy')
+        .then(() => (this.copied = true)).catch(() => (alert("Something went horribly wrong")))
     },
     async setNewUrl() {
       const postData = {
