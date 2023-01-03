@@ -65,7 +65,6 @@ export default {
       this.fetching = false
       this.urlInfo = data
       this.shortUrl = `${url}/r/${this.urlInfo.url}`
-      console.log(this.urlInfo)
     }
   }
 }
