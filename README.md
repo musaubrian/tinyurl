@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/deb40d62-49af-4828-a6ce-4b02fbc70900/deploy-status)](https://app.netlify.com/sites/trl/deploys)
 
-### [Backend code]('https://github.com/musaubrian/backend-go')
+### [Backend code](https://github.com/musaubrian/backend-go)
 
 <h1 align="center">Welcome to tinyurl 👋</h1>
 <p>
