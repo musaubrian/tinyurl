@@ -1,44 +1,34 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/deb40d62-49af-4828-a6ce-4b02fbc70900/deploy-status)](https://app.netlify.com/sites/trl/deploys)
 
-### Backend code -> [:back]('')
+### [Backend code]('https://github.com/musaubrian/backend-go')
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+<h1 align="center">Welcome to tinyurl 👋</h1>
+<p>
+  <a href="https://www.npmjs.com/package/tinyurl" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/tinyurl.svg">
+  </a>
+</p>
 
-## Setup
+> UI for the url shortener
 
-Make sure to install the dependencies:
+### 🏠 [Homepage](https://trl.netlify.app)
 
-```bash
-# yarn
+## Install
+
+```sh
 yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
 ```
 
-## Development Server
+## Author
 
-Start the development server on http://localhost:3000
+👤 **MusauBrian(Ernest)**
 
-```bash
-npm run dev
-```
+* Website: musaubrian.netlify.app
+* Github: [@musaubrian](https://github.com/musaubrian)
 
-## Production
+## Show your support
 
-Build the application for production:
+Give a ⭐️ if this project helped you!
 
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
