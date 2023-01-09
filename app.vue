@@ -7,7 +7,7 @@
         placeholder="https://yourprettylonglinkhere.com" required>
       <button type="submit"
         class="w-4/6 md:w-3/6 border-0 p-3 bg-blue-500 md:mt-4 mt-5 text-gray-100 text-lg rounded-lg font-semibold transition-all active:bg-blue-700  active:transition-all">
-        <span v-if="fetching">Generating link...</span>
+        <span v-if="generating">Generating link...</span>
         <span v-else>Get your link</span>
       </button>
     </form>
@@ -44,27 +44,28 @@ export default {
       longUrl: '',
       urlInfo: '',
       shortUrl: '',
-      fetching: false,
+      generating: false,
       copied: false
     }
   },
   methods: {
     copyUrl() {
       navigator.clipboard.writeText(this.shortUrl)
-        .then(() => (this.copied = true)).catch(() => (alert("Something went horribly wrong")))
+        .then(() => (this.copied = true))
+        .catch(() => (alert("Something went horribly wrong")))
     },
     async setNewUrl() {
       const postData = {
         'redirectUrl': this.longUrl,
       }
       const url = "https://bg.up.railway.app"
-      this.fetching = true;
+      this.generating = true;
       let data = await $fetch(`${url}/n`, {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(postData),
       })
-      this.fetching = false
+      this.generating = false
       this.urlInfo = data
       this.shortUrl = `${url}/r/${this.urlInfo.url}`
     }
