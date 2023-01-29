@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-col w-full h-[80vh] items-center justify-center">
     <h1 class="text-gray-800 text-3xl font-semibold capitalize ">TinieUrl</h1>
-    <h2 class="mb-5 text-center text-gray-700 text-2xl">One more url shortener *(kinda) that you didn't need</h2>
+    <h2 class="mb-5 text-center text-gray-700 text-2xl">One more url shortener *(kinda) that you didn't need</h1>
     <form @submit.prevent="setNewUrl()" class="md:w-3/6 w-5/6 flex flex-col items-center justify-center">
       <input v-model="longUrl" class="border-2 border-gray-800 rounded-lg  py-2 px-3 text-lg w-full" type="url"
-        placeholder="https://yourprettylonglinkhere.com" required>
+        placeholder="https://yourabsurdlylonglinkhere.com" required>
       <button type="submit"
         class="w-4/6 md:w-3/6 border-0 p-3 bg-blue-500 md:mt-4 mt-5 text-gray-100 text-lg rounded-lg font-semibold transition-all active:bg-blue-700  active:transition-all">
         <span v-if="generating">Generating link...</span>
@@ -58,7 +58,7 @@ export default {
       const postData = {
         'redirectUrl': this.longUrl,
       }
-      const url = "https://bg.up.railway.app"
+      const url = "https://t-gt3q.onrender.com"
       this.generating = true;
       let data = await $fetch(`${url}/n`, {
         method: 'POST',
